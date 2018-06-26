@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <title>Currency Converter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!--Link to CSS code-->
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+    <header>
+        <nav class="navbar navbar-default">
+    <h1 class="heading">HAQQ Currency Conversion</h1>
+        </nav>
+    </header>
+    <div class="container">
+    <div class="row">
+          <div class="col-lg-4">
+	<body onload="convert();">
+            <h2>Forex Calculator</h2>
+            <table><tr><td>
+                <div index="input">
+<!--                Input box for numbers, onkeyup convert() function fromCurrency ID-->
+    <input type="number" class="number" id="fromCurrency" min="0" data-bind="value:replyNumber" value="1" onkeyup="convert();"/>
+                </div></td>
+                
+                <td>
+                    <select size="50" id="from" class="selectpicker" data-show-subtext="true" data-live-search="true" onchange="convert();">
+                
+  <ul class="dropdown-menu">
+      <option value="AUD">Australian Dollar</option>
+      <option value="BGN">Bulgarian Lev</option>
+      <option value="BRL">Brazilian Real</option>
+      <option value="CAD">Canadan Dollar</option>
+      <option value="CHF">Swiss Franc</option>
+      <option value="CNY">Chinese Yuan</option>
+      <option value="CZK">Czech Koruna</option>
+      <option value="DKK">Danish Krone</option>
+      <option value="GBP" selected>British Pound</option>
+      <option value="HKD">Hong Kong Dollar</option>
+      <option value="HUF">Hungarian Forint</option>
+      <option value="IDR">Indonesian Rupiah</option>
+      <option value="ILS">Israeli New Shekel</option>
+      <option value="INR">Indian Rupee</option>
+      <option value="JPY">Japanese Yen</option>
+      <option value="KRW">South Korean Won</option>
+      <option value="MXN">Mexican Peso</option>
+      <option value="MYR">Malaysian Ringgit</option>
+      <option value="NOK">Norwegian Krone</option>
+      <option value="NZD">New Zealand Dollar</option>
+      <option value="PHP">Philippine Peso</option>
+      <option value="PLN">Polish Zloty</option>
+      <option value="ROL">Romanian Leu</option>
+      <option value="RUB">Russian Ruble</option>
+      <option value="SEK">Swedish Krona</option>
+      <option value="SGD">Singapore Dollar</option>
+      <option value="THB">Thai Baht</option>
+      <option value="TRY">Turkish Lira</option>
+      <option value="USD">USA Dollar</option>
+      <option value="ZAR">South African Rand</option>
+      <option value="NGN">Nigerian Naira</option>
+  </ul>
+                        </select>
+                        </td>
+                </tr>
+        </table>
+       
+        <table>
+        <tr>
+            <td>
+               <div index="toCurrency">
+    <input type="number" class="number" id="toCurrency" min="0" data-bind="value:replyNumber" disabled />
+               </div>
+                </td>
+            <td>
+<select size="50" id="to" class="selectpicker" data-show-subtext="true" data-live-search="true" onchange="convert();">
+                
+  <ul class="dropdown-menu">
+    <option value="AUD">Australian Dollar</option>
+      <option value="BGN">Bulgarian Lev</option>
+      <option value="BRL">Brazilian Real</option>
+      <option value="CAD">Canadan Dollar</option>
+      <option value="CHF">Swiss Franc</option>
+      <option value="CNY">Chinese Yuan</option>
+      <option value="CZK">Czech Koruna</option>
+      <option value="DKK">Danish Krone</option>
+      <option value="GBP">British Pound</option>
+      <option value="HKD">Hong Kong Dollar</option>
+      <option value="HUF">Hungarian Forint</option>
+      <option value="IDR">Indonesian Rupiah</option>
+      <option value="ILS">Israeli New Shekel</option>
+      <option value="INR">Indian Rupee</option>
+      <option value="JPY">Japanese Yen</option>
+      <option value="KRW">South Korean Won</option>
+      <option value="MXN">Mexican Peso</option>
+      <option value="MYR">Malaysian Ringgit</option>
+      <option value="NOK">Norwegian Krone</option>
+      <option value="NZD">New Zealand Dollar</option>
+      <option value="PHP">Philippine Peso</option>
+      <option value="PLN">Polish Zloty</option>
+      <option value="ROL">Romanian Leu</option>
+      <option value="RUB">Russian Ruble</option>
+      <option value="SEK">Swedish Krona</option>
+      <option value="SGD">Singapore Dollar</option>
+      <option value="THB">Thai Baht</option>
+      <option value="TRY">Turkish Lira</option>
+      <option value="USD" selected>USA Dollar</option>
+      <option value="ZAR">South African Rand</option>
+  </ul>
+                        </select>
+                        
+              </td>
+                </tr>
+           </table>
+        <p id="date"></p>
+     </div>
+        <div class="pull-right">
+
+            
+            
+              <h2>Currency Rates to Euro Base Rate</h2>
+            <table align="center">
+            <tr>
+                <th width=150>Currency</th>
+                <th>Forex Code &#38; Rate</th>
+            </tr>
+            <tr>
+                <td id="long"></td>
+                <td id="currencyList"></td>
+            </tr>
+            </table>
+
+          
+        </div>
+    </div>
+    </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+            <!-- Link to JS content -->
+	    <script src="js/code.js"></script>
+</body>
+</html>
