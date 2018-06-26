@@ -1,0 +1,41 @@
+body {
+font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+.number {
+    height: 35px;
+    font-size: 16px;
+    text-align: right;
+    border-radius:5px;
+    
+}
+.selectpicker {
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+td{
+    padding-top: 20px;
+}
+.heading {
+    text-align: center;
+}
+.navbar {
+    letter-spacing: 5px;
+    background-color: #42DCA3;
+    font-family: 'Ubuntu', sans-serif;
+    border: solid 0.5px #42DCA3;
+    border-radius: 5%;
+}
+h2 {
+    letter-spacing: 4px;
+
+}
+
+th {
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
